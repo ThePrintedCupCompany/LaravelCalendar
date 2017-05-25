@@ -4,8 +4,8 @@ Install the package through [Composer](http://getcomposer.org/). Edit your proje
 
 ```php
 "require": {
-	"laravel/framework": "4.0.*",
-	"gloudemans/calendar": "dev-master"
+	"laravel/framework": "5.4.*",
+	"pcc/calendar": "dev-master"
 }
 ```
 
