@@ -18,8 +18,7 @@ class CalendarServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['calendar'] = $this->app->share(function($app)
-		{
+		$this->app->singleton('calendar', function($app) {
 			$request = $app['request'];
 			return new CalendarGenerator($request);
 		});
