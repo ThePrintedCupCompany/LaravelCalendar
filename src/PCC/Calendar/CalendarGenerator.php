@@ -1,4 +1,4 @@
-<?php namespace Gloudemans\Calendar;
+<?php namespace PCC\Calendar;
 
 use Lang;
 
@@ -13,6 +13,7 @@ class CalendarGenerator {
 	protected $show_next_prev  	= false;
 	protected $next_prev_url   	= '';
 	protected $segments        	= false;
+	protected $num_days         = 7;
 
 	/**
 	 * Constructor
@@ -154,7 +155,7 @@ class CalendarGenerator {
 
 		$day_names = $this->get_day_names();
 
-		for ($i = 0; $i < 7; $i ++)
+		for ($i = 0; $i < $this->num_days; $i ++)
 		{
 			$out .= str_replace('{week_day}', $day_names[($start_day + $i) %7], $this->temp['week_day_cell']);
 		}
@@ -167,7 +168,7 @@ class CalendarGenerator {
 
 			$out .= $this->temp['cal_row_start'];
 
-			for ($i = 0; $i < 7; $i++)
+			for ($i = 0; $i < $this->num_days; $i++)
 			{
 				$out .= ($is_current_month == TRUE AND $day == $cur_day) ? $this->temp['cal_cell_start_today'] : $this->temp['cal_cell_start'];
 

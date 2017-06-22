@@ -17,11 +17,11 @@ Now all you have to do is add the service provider of the package and alias the 
 
 Add a new line to the `service providers` array:
 
-	'Gloudemans\Calendar\CalendarServiceProvider'
+	'PCC\Calendar\CalendarServiceProvider'
 
 And finally add a new line to the `aliases` array:
 
-	'Calendar'        => 'Gloudemans\Calendar\Facades\Calendar',
+	'Calendar'        => 'PCC\Calendar\Facades\Calendar',
 
 Now you're ready to start using the calendar package in your application.
 

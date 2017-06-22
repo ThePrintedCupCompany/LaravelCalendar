@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Gloudemans\\Calendar": "src/"
+            "PCC\\Calendar": "src/"
         }
     },
     "minimum-stability": "dev"
